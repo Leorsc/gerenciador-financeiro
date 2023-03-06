@@ -30,6 +30,7 @@ function SignUp() {
       });
       navigate("/");
     } catch (error) {
+      console.log(error)
       if (error.response?.data?.message === "O email já existe") {
         setApiError("Este email já está cadastrado.");
       } else {
