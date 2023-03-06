@@ -1,0 +1,35 @@
+.form-sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+
+  height: 781px;
+  width: 513px;
+  padding: 61px 32px 47px;
+  background-color: var(--white);
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.form-group-sign-up {
+  align-items: center;
+  width: 450px;
+  height: 547px;
+}
+
+.form-group-btn-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 78px;
+}
+
+.span-sign {
+  color: var(--light-purple-span);
+  font-size: 14px;
+}
