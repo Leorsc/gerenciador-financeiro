@@ -1,0 +1,62 @@
+.modal-record {
+  background-color: var(--white);
+  position: relative;
+  width: 611px;
+  height: 879px;
+  border-radius: 20px;
+}
+
+.form-record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  height: 673px;
+  margin: 61px 62px 48px 59px;
+}
+
+.form-group-record {
+  align-items: flex-start;
+  width: 490px;
+  height: 681px;
+}
+
+.btn-record-left {
+  width: 245px;
+  height: 56px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.btn-record-right {
+  width: 245px;
+  height: 56px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.input-value {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.input-value input {
+  all: unset;
+  width: 100%;
+}
+
+
+select {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+select option {
+  appearance: none;
+  padding: 16px;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}

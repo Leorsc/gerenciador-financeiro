@@ -1,0 +1,53 @@
+.modal-delete {
+  width: 111px;
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+#triangulo-para-cima {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 17px solid #E4F2FD;
+}
+
+.rectangle-delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70px;
+  width: 111px;
+  background-color: #E4F2FD;
+  font-family: 'Rubik', sans-serif;
+  justify-content: space-around;
+  border-radius: 4px;
+}
+
+.rectangle-delete span {
+  font-weight: 300;
+  font-size: 10px;
+  color: #000000;
+}
+
+.rectangle-delete button {
+  font-weight: 500;
+  font-size: 9px;
+  color: var(--white);
+}
+
+.rectangle-delete button {
+  width: 37px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+.btn-modal-delete {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}

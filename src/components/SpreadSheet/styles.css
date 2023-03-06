@@ -1,0 +1,123 @@
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  width: 100%;
+  padding: 0 141px 0 27px;
+  background: #FAFAFA;
+  box-shadow: 0px 2px 11px #0000001a;
+  border-radius: 10px;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container-header span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  width: 120px;
+  font-weight: 700;
+  font-size: 14px;
+
+  color: #000000;
+}
+
+#not-active-filter-data {
+  transform: rotateY(180deg);
+  transition: 0.4s;
+}
+
+#active-filter-data {
+  transform: rotate(180deg);
+  transition: 0.4s;
+}
+
+.table-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.posicao-modal {
+  position: absolute;
+  top: 110px;
+  left: 105px;
+  z-index: 1;
+}
+
+.container-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+  padding-left: 27px;
+  padding-right: 35px;
+}
+
+.container-line span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 120px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+}
+
+.container-icons-table {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 58px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.arrows-page {
+  display: flex;
+  justify-content: space-around;
+  width: 120px;
+}
+
+.arrows-page button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--light-purple);
+  color: var(--white);
+}
+
+.arrows-page button:active {
+  transform: scale(1.05);
+}
+
+#arrow-left button,
+#double-arrow-left button {
+  transform: rotateY(180deg);
+}
