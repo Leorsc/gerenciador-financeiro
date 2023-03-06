@@ -1,0 +1,48 @@
+.page-sign-in {
+  width: 1218px;
+  height: 535px;
+  gap: 91px;
+  margin-top: 108px;
+}
+
+.container-sign-in {
+  width: 614px;
+  height: 351px;
+  color: var(--white);
+}
+
+.container-sign-in h1 {
+  font-weight: 700;
+  font-size: 52px;
+}
+
+.container-sign-in strong {
+  color: var(--light-purple);
+}
+
+.container-sign-in p {
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.form-sign-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 513px;
+  height: 535px;
+  padding: 60px 32px 47px;
+  background-color: var(--white);
+
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.form-group-sign-in {
+  align-items: center;
+  width: 450px;
+  height: 300px;
+}
