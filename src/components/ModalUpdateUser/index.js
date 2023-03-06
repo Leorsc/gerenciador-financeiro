@@ -11,7 +11,7 @@ function ModalUpdateUser({
 }) {
 
   const token = getItem('token');
-
+  const [isFormIncomplete, setIsFormIncomplete] = useState(false);
   const [form, setForm] = useState(
     {
       name: usuario.nome,
@@ -31,9 +31,21 @@ function ModalUpdateUser({
     setForm({ ...form, [event.target.name]: event.target.value })
   }
 
+  function validationForm() {
+    const requiredFields = ["nome", "email", "senha", "confirmarSenha"];
+    for (let field of requiredFields) {
+      if (!form[field]) {
+        setIsFormIncomplete(true);
+        return;
+      }
+    }
+    setIsFormIncomplete(false);
+  }
+
   async function handleUpdateUser(event) {
     event.stopPropagation();
     event.preventDefault()
+    validationForm()
     try {
       const response = await api.put('/usuario',
         {
@@ -52,7 +64,7 @@ function ModalUpdateUser({
       setUsuario({ name: form.name, email: form.email })
       handleCloseModal(event);
     } catch (error) {
-      console.log(error)
+      console.log(error.response.data.message)
     }
   }
 
@@ -127,9 +139,14 @@ function ModalUpdateUser({
               </div>
             </div>
           </div>
-          <button className='btn width-236'>
-            Confirmar
-          </button>
+          <div className={isFormIncomplete ? 'error-btn' : ''}>
+            {isFormIncomplete && (
+              <span className="form-error">
+                Por favor, preencha todos os campos.
+              </span>
+            )}
+            <button className="btn width-236">Confirmar</button>
+          </div>
         </form>
       </div>
     </div>

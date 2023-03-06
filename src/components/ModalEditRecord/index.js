@@ -23,6 +23,7 @@ function ModalEditRecord({
       categoria_id: tableRowEdit.categoria_id
     }
   )
+  const [isFormIncomplete, setIsFormIncomplete] = useState(false);
 
   function handleCloseModal(event) {
     event.stopPropagation();
@@ -45,9 +46,21 @@ function ModalEditRecord({
     }
   }
 
+  function validationForm() {
+    const requiredFields = ["tipo", "descricao", "data", "categoria_id"];
+    for (let field of requiredFields) {
+      if (!form[field]) {
+        setIsFormIncomplete(true);
+        return;
+      }
+    }
+    setIsFormIncomplete(false);
+  }
+
   async function handleEditRecord(event) {
     event.stopPropagation();
     event.preventDefault()
+    validationForm()
 
     const transactionUpdate = {
       tipo: form.tipo,
@@ -190,9 +203,14 @@ function ModalEditRecord({
               />
             </div>
           </div>
-          <button className='btn width-236'>
-            Confirmar
-          </button>
+          <div className={isFormIncomplete ? 'error-btn' : ''}>
+            {isFormIncomplete && (
+              <span className="form-error">
+                Por favor, preencha todos os campos.
+              </span>
+            )}
+            <button className="btn btn-home width-236">Confirmar</button>
+          </div>
         </form>
       </div >
     </div >

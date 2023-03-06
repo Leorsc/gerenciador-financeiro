@@ -229,7 +229,7 @@ function SpreadSheet({
         <span>
           Página{' '}
           <strong>
-            {count} de {pageCount}
+            {pageCount < 1 ? `0 de ${pageCount}` : `${count} de ${pageCount}`}
           </strong>{' '}
         </span>
       </div>
@@ -239,4 +239,3 @@ function SpreadSheet({
 
 
 export default SpreadSheet
-
