@@ -1,0 +1,101 @@
+.font-rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.background {
+  background-image: url('../assets/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-group-sign-title {
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--light-purple);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 93px;
+  width: 100%;
+}
+
+.form-inputs {
+  width: 100%;
+  height: 63px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.modal {
+  background-color: #3d3d3d7a;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+}
+
+.form-error {
+  color: #ff0000;
+  font-size: 13px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 48px;
+  background-color: var(--light-purple);
+  color: var(--white);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+}
