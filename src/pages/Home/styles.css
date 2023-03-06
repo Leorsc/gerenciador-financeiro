@@ -1,0 +1,44 @@
+.background-home {
+  background: linear-gradient(to left, #6460fb, #05ede3);
+}
+
+.home-page {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 50px 50px 0 0;
+  height: 100%;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  padding-left: 105px;
+  width: 100%;
+  position: relative;
+}
+
+.container-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 964px;
+  gap: 24px;
+}
+
+.filter-icon {
+  top: 55px;
+  left: 95px;
+  position: absolute;
+}
+
+.container-tabela {
+  min-height: 58px;
+  height: 100%;
+  width: 964px;
+  margin-top: 57px;
+  border-radius: 10px;
+}
+
+.btn-home {
+  height: 42px;
+}
