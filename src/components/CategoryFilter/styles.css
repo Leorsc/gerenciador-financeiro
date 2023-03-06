@@ -1,0 +1,91 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 280px;
+  padding: 26px 0 17px 31px;
+  background: #FAFAFA;
+  box-shadow: 0px 2px 11px #0000001a;
+  border-radius: 10px;
+}
+
+.filter h1 {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 16px;
+  color: #b9b9b9
+}
+
+.container-categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 900px;
+  height: 160px;
+}
+
+.filter-categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 12px;
+  height: 35px;
+  width: 120px;
+  border-radius: 10px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--light-purple);
+  color: var(--white);
+}
+
+.not-active {
+  background-color: var(--white);
+  box-shadow: 0px 2px 11px #0000004d;
+}
+
+.not-active span {
+  width: 70px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.active span {
+  width: 70px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.not-active img {
+  height: 8px;
+  width: 8px;
+  transform: rotate(90deg);
+  transition: 0.4s;
+}
+
+.active img {
+  height: 8px;
+  width: 8px;
+  transform: rotate(45deg);
+  transition: 0.4s;
+}
+
+.container-btn-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 340px;
+}
+
+.btn-filter {
+  width: 156px;
+  height: 40px;
+  box-shadow: 0px 2px 11px #0000004d;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 14px;
+}
