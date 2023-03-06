@@ -1,0 +1,37 @@
+header {
+  width: 100%;
+  height: 116px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 41px 100px 32px;
+
+  top: 0;
+}
+
+.user-container {
+  width: 158px;
+  color: var(--white);
+  gap: 10px;
+}
+
+.user-content {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.icon-sing-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7.165px;
+}
+
+.modal-update {
+  background-color: var(--white);
+  position: relative;
+  width: 611px;
+  height: 770px;
+}

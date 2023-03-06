@@ -1,0 +1,51 @@
+.modal-update {
+  background-color: var(--white);
+  position: relative;
+  width: 611px;
+  height: 770px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.form-update-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  width: 485px;
+  height: 669px;
+  margin: 56px 62px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.form-group-home {
+  align-items: flex-start;
+  gap: 48px;
+  width: 485px;
+  height: 579px;
+}
+
+.home-form-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.icon-close {
+  position: absolute;
+  cursor: pointer;
+
+  top: 67px;
+  right: 65px;
+}
+
+.home-form-title {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+}
