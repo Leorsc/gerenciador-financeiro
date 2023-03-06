@@ -9,11 +9,8 @@ export const signUpValidationSchema = yup.object().shape({
   password: yup
     .string()
     .required("Informe a senha")
-    .min(8, "A senha deve ter pelo menos 8 caracteres")
-    .matches(
-      /^(?=.[A-Z])(?=.[!@#$%^&()_+[\]{};':"|,.<>/?=-]).$/,
-      "A senha deve ter pelo menos uma letra maiúscula e um caractere especial"
-    ),
+    .min(8, "A senha deve ter pelo menos 8 caracteres"),
+
   confirmPassword: yup
     .string()
     .oneOf([yup.ref("password"), null], "As senhas não coincidem")
