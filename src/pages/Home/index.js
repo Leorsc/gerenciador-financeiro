@@ -51,6 +51,23 @@ function Home() {
     setTransactionsOut(valueTransctionsInFilterOut)
   }
 
+  // async function handleDateTransactions() {
+  //   try {
+
+  //     const response = await api.get('/extrato',
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${token}`
+  //         }
+  //       })
+  //     setTransactionsIn(response.data.entradas)
+  //     setTransactionsOut(response.data.saidas)
+
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+
   function handleFilter(event) {
     event.stopPropagation();
     setFilterMode(!filterMode);
