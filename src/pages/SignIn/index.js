@@ -5,7 +5,8 @@ import Header from "../../components/Header";
 import "./styles.css";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signInValidationSchema } from "../../utils/yupValidations";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getItem } from "../../utils/storage";
 
 function SignIn() {
   const [apiError, setApiError] = useState(null);
@@ -18,6 +19,13 @@ function SignIn() {
   } = useForm({
     resolver: yupResolver(signInValidationSchema),
   });
+
+  useEffect(() => {
+    const token = getItem('token');
+    if (token) {
+      navigate('/home');
+    }
+  }, [navigate])
 
   async function onSubmit(data) {
     try {
