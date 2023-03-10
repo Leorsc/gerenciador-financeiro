@@ -140,11 +140,11 @@ function ModalUpdateUser({
             </div>
           </div>
           <div className={isFormIncomplete ? 'error-btn' : ''}>
-            {isFormIncomplete && (
+            {isFormIncomplete ? (
               <span className="form-error">
                 Por favor, preencha todos os campos.
               </span>
-            )}
+            ) : ""}
             <button className="btn width-236">Confirmar</button>
           </div>
         </form>

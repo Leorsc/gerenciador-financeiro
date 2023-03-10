@@ -15,7 +15,7 @@ function ModalAddRecord({
   const [isFormIncomplete, setIsFormIncomplete] = useState(false);
 
   const [form, setForm] = useState({
-    tipo: "",
+    tipo: "saida",
     descricao: "",
     data: "",
     categoria_id: 0,
@@ -85,7 +85,7 @@ function ModalAddRecord({
 
   function clerForm() {
     setForm({
-      tipo: "",
+      tipo: "saida",
       descricao: "",
       data: "",
       categoria_id: 0,
