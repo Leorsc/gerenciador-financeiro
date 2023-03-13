@@ -12,6 +12,7 @@ function ModalUpdateUser({
 
   const token = getItem('token');
   const [isFormIncomplete, setIsFormIncomplete] = useState(false);
+  const [checked, setChecked] = useState(false);
   const [form, setForm] = useState(
     {
       name: usuario.nome,
@@ -20,6 +21,10 @@ function ModalUpdateUser({
       confirmPassword: ''
     }
   )
+
+  function handleChange(event) {
+    setChecked(event.target.checked);
+  };
 
   function handleCloseModal(event) {
     event.stopPropagation();
@@ -121,7 +126,7 @@ function ModalUpdateUser({
                 <label htmlFor="password">Senha</label>
                 <input
                   className='form-inputs'
-                  type="password"
+                  type={!checked ? 'password' : 'text'}
                   name='password'
                   value={form.password}
                   onChange={(event) => handleForm(event)}
@@ -131,11 +136,17 @@ function ModalUpdateUser({
                 <label htmlFor='confirmPassword'>Confirmar Senha</label>
                 <input
                   className='form-inputs'
-                  type='password'
+                  type={!checked ? 'password' : 'text'}
                   name='confirmPassword'
                   value={form.confirmPassword}
                   onChange={(event) => handleForm(event)}
                 />
+              </div>
+              <div className="form-show-password">
+                <label>
+                  <input type='checkbox' onChange={handleChange} />
+                  Mostrar senha
+                </label>
               </div>
             </div>
           </div>

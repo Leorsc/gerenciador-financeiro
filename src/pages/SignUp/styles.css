@@ -9,6 +9,7 @@
   width: 513px;
   padding: 61px 32px 47px;
   background-color: var(--white);
+  border-radius: 20px;
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -32,4 +33,14 @@
 .span-sign {
   color: var(--light-purple-span);
   font-size: 14px;
+}
+
+.form-show-password {
+  width: 100%;
+}
+
+.form-show-password label {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
 }

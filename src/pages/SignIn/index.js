@@ -7,9 +7,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { signInValidationSchema } from "../../utils/yupValidations";
 import { useEffect, useState } from "react";
 import { getItem } from "../../utils/storage";
+import closeEye from '../../assets/close-eye.svg';
+import openEye from '../../assets/open-eye.svg';
 
 function SignIn() {
   const [apiError, setApiError] = useState(null);
+  const [showEye, setShowEye] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
   const navigate = useNavigate();
   const {
     register,
@@ -26,6 +31,11 @@ function SignIn() {
       navigate('/home');
     }
   }, [navigate])
+
+  function handleShowPassword() {
+    setShowPassword(!showPassword);
+    setShowEye(!showEye);
+  }
 
   async function onSubmit(data) {
     try {
@@ -82,11 +92,13 @@ function SignIn() {
             </div>
             <div className="form-control">
               <label htmlFor="senha">Senha</label>
-              <input
-                className="form-inputs"
-                type="password"
-                {...register("senha")}
-              />
+              <div className="form-input-password">
+                <input
+                  type={!showPassword ? 'password' : 'text'}
+                  {...register("senha")}
+                />
+                <img onClick={() => handleShowPassword()} src={!showEye ? closeEye : openEye} alt='close eye' />
+              </div>
               {errors.senha && (
                 <span className="form-error">{errors.senha.message}</span>
               )}

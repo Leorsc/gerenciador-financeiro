@@ -11,6 +11,8 @@ import { signUpValidationSchema } from "../../utils/yupValidations";
 
 function SignUp() {
   const navigate = useNavigate();
+  const [checked, setChecked] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -19,6 +21,10 @@ function SignUp() {
     resolver: yupResolver(signUpValidationSchema),
   });
   const [apiError, setApiError] = useState(null);
+
+  function handleChange(event) {
+    setChecked(event.target.checked);
+  };
 
   async function onSubmit(data) {
     try {
@@ -63,7 +69,7 @@ function SignUp() {
             <label htmlFor="password">Senha</label>
             <input
               className="form-inputs"
-              type="password"
+              type={!checked ? 'password' : 'text'}
               {...register("password")}
             />
             {errors.password && (
@@ -74,7 +80,7 @@ function SignUp() {
             <label htmlFor="confirmPassword">Confirmar Senha</label>
             <input
               className="form-inputs"
-              type="password"
+              type={!checked ? 'password' : 'text'}
               {...register("confirmPassword")}
             />
             {errors.confirmPassword && (
@@ -84,6 +90,12 @@ function SignUp() {
             )}
           </div>
           {apiError && <span className="form-error">{apiError}</span>}
+          <div className="form-show-password">
+            <label>
+              <input type='checkbox' onChange={handleChange} />
+              Mostrar senha
+            </label>
+          </div>
         </div>
         <div className="form-group-btn-sign">
           <button className="btn width-450">Cadastrar</button>
