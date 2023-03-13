@@ -37,7 +37,7 @@ function ModalUpdateUser({
   }
 
   function validationForm() {
-    const requiredFields = ["nome", "email", "senha", "confirmarSenha"];
+    const requiredFields = ["name", "email", "password", "confirmPassword"];
     for (let field of requiredFields) {
       if (!form[field]) {
         setIsFormIncomplete(true);
